@@ -1,0 +1,17 @@
+version: '3'
+services:
+    DiscoPoP-test-environment:
+        image:  jupyter/base-notebook
+        ports:
+            - 8888:8888
+        container_name:     DiscoPoP_test_environment
+        command: >
+            bash -c "echo 'Cleaning DiscoPoP test environment...' &&
+            rm -f -r test_environment &&
+            echo 'Preparing DiscoPoP test environment...' &&
+            mkdir -p test_environment &&
+            cd test_environment &&
+            touch asdf.txt &&
+            pwd &&
+            ls &&
+            jupyter-notebook"
