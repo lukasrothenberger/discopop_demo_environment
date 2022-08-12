@@ -9,9 +9,6 @@ services:
             bash -c "echo 'Cleaning DiscoPoP test environment...' &&
             rm -f -r test_environment &&
             echo 'Preparing DiscoPoP test environment...' &&
-            mkdir -p test_environment &&
-            cd test_environment &&
-            touch asdf.txt &&
-            pwd &&
-            ls &&
+            git clone git@github.com:lukasrothenberger/discopop_test_environment.git &&
+            cd discopop_test_environment &&
             jupyter-notebook"
