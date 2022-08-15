@@ -9,6 +9,7 @@ In order to execute the Docker-container, it is sufficient to clone this reposit
 The Example environment can be found in the `DiscoPoP Demo.ipynb`.
 
 ## Features
+TODO
 
 ## Usage
-
+TODO
