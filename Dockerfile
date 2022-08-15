@@ -12,21 +12,10 @@ RUN git clone https://github.com/lukasrothenberger/discopop_test_environment.git
 RUN git clone https://github.com/discopop-project/discopop.git
 RUN git clone https://github.com/lukasrothenberger/DP_Maker.git
 WORKDIR "/home/jovyan/discopop"
-RUN gcc --version
 RUN git fetch && git branch && git checkout cfee94e8f287a4d8567a318f422e34d7e34b07d7
 RUN mkdir build
 WORKDIR "/home/jovyan/discopop/build"
-RUN ls
 RUN cmake ..
 RUN make -j12
-WORKDIR "/home/jovyan/discopop/build/rtlib"
-RUN ls
-WORKDIR "/home/jovyan/discopop/build/rtlib/omp-pragma-extraction"
-RUN ls
-WORKDIR "/home/jovyan/discopop/build/rtlib/simple-alias-detection"
-RUN ls
-
 WORKDIR "/home/jovyan/discopop_test_environment"
 RUN chmod -R a+rwx *
-RUN pwd
-RUN ls
