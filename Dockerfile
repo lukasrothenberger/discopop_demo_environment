@@ -13,7 +13,7 @@ RUN git clone https://github.com/lukasrothenberger/discopop_test_environment.git
 RUN git clone https://github.com/discopop-project/discopop.git
 RUN git clone https://github.com/lukasrothenberger/DP_Maker.git
 WORKDIR "/home/jovyan/discopop"
-RUN git fetch && git branch && git checkout cfee94e8f287a4d8567a318f422e34d7e34b07d7
+RUN git fetch && git branch && git checkout a97fc5a58e5bc483f12e6ab3ab7181c8f2307546
 RUN mkdir build
 WORKDIR "/home/jovyan/discopop/build"
 RUN cmake ..
