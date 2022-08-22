@@ -3,6 +3,6 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
-    container_name: DiscoPoP_test_environment
+    container_name: DiscoPoP_demo_environment
     ports:
       - 8888:8888

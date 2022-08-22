@@ -9,7 +9,7 @@ RUN ln -s /usr/bin/clang++-11 /usr/bin/clang++ || true
 RUN ln -s /usr/bin/llvm-link-11 /usr/bin/llvm-link || true
 RUN ln -s /usr/bin/opt-11 /usr/bin/opt || true
 USER jovyan
-RUN git clone https://github.com/lukasrothenberger/discopop_test_environment.git
+RUN git clone https://github.com/lukasrothenberger/discopop_demo_environment.git
 RUN git clone https://github.com/discopop-project/discopop.git
 RUN git clone https://github.com/lukasrothenberger/DP_Maker.git
 WORKDIR "/home/jovyan/discopop"
@@ -24,5 +24,5 @@ RUN python -m pip install -r requirements.txt
 WORKDIR "/home/jovyan/discopop/discopop_validation"
 RUN python -m pip install -r requirements.txt
 
-WORKDIR "/home/jovyan/discopop_test_environment"
+WORKDIR "/home/jovyan/discopop_demo_environment"
 RUN chmod -R a+rwx *
