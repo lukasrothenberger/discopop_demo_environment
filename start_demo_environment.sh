@@ -1,2 +1,2 @@
 #sudo docker system prune
-sudo docker-compose up --build --force-recreate
+sudo CACHEBUST=$(date +%s) docker-compose up --build --force-recreate
